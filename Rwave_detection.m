@@ -1,10 +1,10 @@
-function [R_peaks,filtered_signal] = Rwave_detection(ECG_signal,PLFREQ)
+function [R_peaks,filtered_signal] = Rwave_detection(ECG_signal)
 % This function receives an ECG signal, and returns a vector that contains the indexes in which the R waves appear in the ECG signal.
 % in order to do so, the function computes the first derivative of the
 % signal, compares it to a preset threshold and compares the suspect
 % R-waves to the original signal's peaks.
 
-filtered_signal = Filter_sig(ECG_signal,PLFREQ);
+filtered_signal = Filter_sig(ECG_signal);
 
 % Set sample frequency
 fs = 2000;
